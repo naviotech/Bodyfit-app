@@ -1,0 +1,57 @@
+html * {
+    font-family: $inter;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    header,main,footer{
+        width: 100%;
+        max-width: 1300px;
+    }
+} 
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../../fonts/icomoon.eot?u381dx');
+    src:  url('../../fonts/icomoon.eot?u381dx#iefix') format('embedded-opentype'),
+    url('../../fonts/icomoon.ttf?u381dx') format('truetype'),
+    url('../../fonts/icomoon.woff?u381dx') format('woff'),
+    url('../../fonts/icomoon.svg?u381dx#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+    content: "\f09b";
+    color: black;
+}
+.icon-discord:before {
+    content: "\e900";
+    color: black;
+}
+.icon-linkedin:before {
+    content: "\eac9";
+    color: black;
+}

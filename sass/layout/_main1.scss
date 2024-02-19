@@ -1,0 +1,325 @@
+main{
+    width: 100%;
+    .contenedor-formulario{
+        @include breakpoint("tablet"){
+            margin-top: -260px;
+            padding: 0px 40px;
+            margin-bottom: 96px;
+        }
+        @include breakpoint("tablet-horizontal"){
+            margin-top: -400px;
+            padding:0px 140px;
+        }
+        margin-top: -140px;
+        margin-bottom: 72px;
+        padding: 0px 24px;
+        form{
+            @include breakpoint("tablet"){
+                padding: 40px;
+            }
+            background-color: $white;
+            border-radius: 16px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap:24px;
+            box-shadow: 12px 14px 20px #5e6e8575;
+            legend{
+                font-weight: bold;
+                text-align: center;
+                font-size: 20px;
+                @include breakpoint("tablet"){
+                text-align: start;
+                }
+            }
+            @include breakpoint("tablet"){
+                .agrupacion{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    div{
+                        width: 40%;
+                        display: flex;
+                        flex-direction: column;
+                        input{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .agrupacion{
+                display: flex;
+                flex-direction: column;
+                gap:12px;
+            }
+            label{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                input{
+                    padding:20px 20px 20px 24px;
+                    border-radius: 16px;
+                    border-style:none; 
+                    border:2px solid  #D8E2E7;
+                    font-size: 20px;
+                    font-weight: bold;
+                    outline-color:$blue ;
+                    &::placeholder{
+                        color:$blue;
+                        font-size:20px;
+                        font-weight: bold;
+                    }
+                }
+            }
+            
+            button{
+                &:disabled{
+                    color:$dark-grey;
+                    background-color: $light-grey;
+                    cursor: not-allowed;
+                    &:active{
+                        color:#888;
+                        transition: none;
+                        transform: none;
+                        box-shadow: 0 7px 0 #D6E6FE, 0px 8px 3px #0000004d;
+                    }
+                }
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                color:$blue;
+                font-weight: bold;
+                font-size: 16px;
+                border-radius: 16px;
+                padding: 6px 8px;
+                border-style: initial;
+                background-color: #D6E6FE;
+                box-shadow: 0 7px 0 #D6E6FE, 0px 8px 3px #0000004d;
+                transition: all .25s;
+                @include breakpoint("tablet"){
+                    width: 50%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                &:active{
+                    color:#888;
+                    transform: translateY(5px);
+                    box-shadow: 0 2px 0 #D6E6FE, 0px 3px 3px #0000004d;
+                }
+            }
+            .resultado{
+                padding: 32px;
+                background-color: $blue;
+                color:$white;
+                border-radius: 16px;
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+                #result_value{
+                    font-size: 24px;
+                    font-weight: bold;
+                }
+                @include breakpoint("tablet"){
+                    border-radius: 8px 42px 42px 8px;
+                }
+            }
+        }
+        
+    }
+    .info{
+        @include breakpoint("tablet"){
+            width: 100%;
+            flex-direction: initial;
+            gap: 40px;
+            margin-bottom: 71px;
+        }
+        @include breakpoint("desktop"){
+            padding: 0px 140px;
+            margin-bottom: 120px;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
+        margin-bottom: 71px;
+        picture{
+            @include breakpoint("tablet"){
+                width: 70%;
+            }
+            @include breakpoint("desktop"){
+                
+            }
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image:none;
+            border-radius: 26px;
+            
+            img{
+                @include breakpoint("tablet"){
+                    width: 100%;
+                }
+                width: 70%;
+                text-align: center;
+            }
+        }
+        div{
+            @include breakpoint("tablet"){
+                padding: 0px 43px;
+                width: 100%;
+            }
+            padding: 0px 24px;
+            display: flex;
+            flex-direction: column;
+            gap:32px;
+            h2{
+                font-size: 32px;
+            }
+            p{
+                color:$dark-grey;
+            }
+        }
+    }
+    .recomendaciones{
+        @include breakpoint("tablet"){
+            padding:60px 40px 60px 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        @include breakpoint("desktop"){
+            padding: 0px 140px;
+            margin-bottom: 120px;
+        }
+        padding: 56px 28px 56px 20px;
+        margin-bottom: 72px;
+        background: linear-gradient(#fdfdfd48 0%, #d6e6fe48 50%, #fdfdfd48 100% );
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        gap:40px;
+        article{
+            @include breakpoint("tablet"){
+                flex-direction: initial;
+            }
+            @include breakpoint("desktop"){
+                flex-direction: column;
+            }
+            display: flex;
+            flex-direction: column;
+            gap:32px;
+            div{
+                display: flex;
+                flex-direction: column;
+                gap:20px;
+                p{
+                    color:$dark-grey;
+                }
+            }
+        }
+    }
+    .limitaciones{
+        position: relative;
+        @include breakpoint("tablet"){
+            padding: 0px 40px 0px 40px;
+        }
+        @include breakpoint("desktop"){
+            padding: 0px 140px;
+            .primero{
+                padding: 0px 28px 0px 0px;;
+                width: 35%;;
+                align-items: start;
+                display: flex;
+                flex-direction: initial;
+                justify-content: start;
+                position: absolute;
+                h2{
+                    text-align:justify;
+                }
+            }
+        }
+        padding: 0px 28px 0px 20px;
+        margin-bottom: 72px;
+        display: flex;
+        flex-direction: column;
+        gap:56px;
+        background: linear-gradient(#fdfdfd48 0%, #d6e6fe48 50%, #fdfdfd48 100% );
+        .primero{
+            display: flex;
+            flex-direction: column;
+            gap:32px;
+            h2{
+                font-size: 32px;
+                @include breakpoint("tablet"){
+                    text-align: center;
+                }
+                
+            }
+            p{
+                @include breakpoint("tablet"){
+                    padding: 0px 20px;
+                }
+                @include breakpoint("desktop"){
+                    padding: 0px 0px;
+                }
+                color:$dark-grey;
+            }
+        }
+        .segundo{
+            position: relative;
+            @include breakpoint("tablet"){
+                display: grid;
+                grid-column: 1fr 1fr 1fr 1fr;
+                grid-template-areas:
+                "head head aside aside"
+                "menu menu content content"
+                ". footer footer ."
+                ;
+                .head{grid-area: head;}
+                .aside{grid-area:aside;}
+                .menu{grid-area: menu;}
+                .content{grid-area: content;}
+                .footer{grid-area: footer;}
+                gap: 24px;
+                
+            }
+            @include breakpoint("desktop"){
+                display: grid;
+                grid-column: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+                grid-template-areas:
+                ". . . . . . . . head head head ."
+                ". . . . . . aside aside aside menu menu menu"
+                ". . . . content content content footer footer footer . ."
+                ;
+                .head{grid-area: head;}
+                .aside{grid-area:aside;}
+                .menu{grid-area: menu;}
+                .content{grid-area: content;}
+                .footer{grid-area: footer;}
+                gap: 24px;
+                
+            }
+            display: flex;
+            flex-direction: column;
+            gap:16px;
+            article{
+                padding: 24px;
+                display: flex;
+                flex-direction: column;
+                gap:16px;
+                border-radius: 16px;
+                box-shadow: 7px 9px 20px 0px #5e6e8563;
+                div{
+                    display: flex;
+                    align-items: center;
+                    gap:12px;
+                }
+                p{
+                    color:$dark-grey;
+                }
+            }
+        }
+    }
+}
